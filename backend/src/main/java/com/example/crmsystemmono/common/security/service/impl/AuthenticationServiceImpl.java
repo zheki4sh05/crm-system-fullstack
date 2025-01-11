@@ -77,7 +77,7 @@ public class AuthenticationServiceImpl implements IAuthenticationService {
                     .build();
         }else{
             // Если пользователь с такой почтой уже существует, выбрасываем исключение
-            throw new UserWithSuchEmailAlreadyExistsException();
+            throw new UserWithSuchEmailAlreadyExistsException("User with such email already exists");
         }
 
     }

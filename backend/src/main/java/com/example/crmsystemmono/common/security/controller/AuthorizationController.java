@@ -19,11 +19,9 @@ public class AuthorizationController {
     public ResponseEntity<?> register(
             @RequestBody RegisterRequest request){
 
-        try{
+
             return ResponseEntity.ok(service.register(request));
-        }catch (UserWithSuchEmailAlreadyExistsException e){
-            return new ResponseEntity<>("", HttpStatus.CONFLICT);
-        }
+
 
     }
 
